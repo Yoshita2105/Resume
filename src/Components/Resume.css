@@ -1,0 +1,161 @@
+/* Overall layout */
+.resume {
+  width: 100%;
+  margin: 40px auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f7fc;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+}
+
+.Resume-line {
+  width: 100px;
+  height: 3px;
+  text-align: left;
+  background-color: #007bff;
+  margin:auto;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.header h1 {
+  font-size: 36px;
+  color: #333;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.header p {
+  font-size: 18px;
+  color: #666;
+  line-height: 1.6;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.full {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.education, .professional-experience {
+  flex: 1;
+  min-width: -webkit-fill-available
+}
+
+/* Section headers */
+h2 {
+  font-size: 28px;
+  color: #1d2a5b;
+  font-weight: 600;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #1d2a5b;
+  padding-bottom: 10px;
+}
+
+/* Experience and Education blocks */
+.degree, .experience {
+  background-color: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.05);
+}
+
+.degree h3, .experience h3 {
+  font-size: 22px;
+  color: #1d2a5b;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.degree p, .experience p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
+}
+
+.degree p:last-child, .experience ul {
+  margin-top: 10px;
+}
+
+ul {
+  list-style: disc;
+  margin-left: 20px;
+}
+
+ul li {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 8px;
+}
+
+.experience ul li::marker {
+  color: #1d2a5b;
+}
+
+/* Hover effects for interactive elements */
+.experience:hover, .degree:hover {
+  transform: translateY(-5px);
+  transition: transform 0.3s ease;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.degree p, .experience p {
+  transition: color 0.3s ease;
+}
+
+.degree:hover p, .experience:hover p {
+  color: #1d2a5b;
+}
+
+/* Styling for the education section */
+.degree h3 {
+  font-size: 22px;
+  color: #1d2a5b;
+}
+
+.degree p:first-child {
+  font-style: italic;
+  color: #999;
+  font-size: 15px;
+}
+
+.degree p:last-child {
+  font-size: 16px;
+  color: #555;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .resume {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .full {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .header h1 {
+    font-size: 32px;
+  }
+
+  .header p {
+    font-size: 16px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  .degree h3, .experience h3 {
+    font-size: 20px;
+  }
+}

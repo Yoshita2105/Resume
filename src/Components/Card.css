@@ -1,0 +1,36 @@
+/* src/Card.css */
+
+.card {
+    width: 100%; /* Make sure the card takes up the full available width of its container */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    overflow: hidden;
+    background-color: white;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover transition */
+  }
+  
+  .card:hover {
+    transform: scale(1.05); /* Slightly scale up the card on hover */
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+  }
+  
+  .card-icon {
+    display: flex;
+    justify-content: center; /* Center the icon */
+    align-items: center;
+    padding: 20px;
+    background-color: #f4f4f4; /* Light background for the icon section */
+    height: 120px;
+    
+  }
+  
+  .card-body {
+    padding: 16px; /* Add some padding for inner spacing */
+  }
+  
+  .card-title {
+    font-size: 1.5rem; /* Larger font size for the title */
+    margin-bottom: 8px; /* Space between title and content */
+    color: #333; /* Darker color for better readability */
+  }

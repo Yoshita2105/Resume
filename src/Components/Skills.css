@@ -1,0 +1,177 @@
+/* Base styles */
+#skills {
+    background-color: #f9fafb; /* Light background */
+    padding: 0px 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  h2 {
+    font-size: 36px;
+    color: #1d4ed8; /* Bold blue for headings */
+    margin-bottom: 30px;
+    text-align: left;
+    border-bottom: 3px solid #1d4ed8;
+    display: inline-block;
+    padding-bottom: 5px;
+  }
+  
+  /* Grid styles */
+  .grid {
+    display: grid;
+    gap: 20px;
+  }
+  
+  .grid-cols-1 {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  
+  .sm\:grid-cols-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .lg\:grid-cols-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  /* Card styles */
+  .bg-white {
+    background-color: #ffffff;
+  }
+  
+  .shadow-lg {
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .rounded-lg {
+    border-radius: 12px;
+  }
+  
+  .p-6 {
+    padding: 24px;
+  }
+  
+  .hover\:shadow-xl:hover {
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  .transition-shadow {
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+  }
+  
+  .bg-white:hover {
+    transform: translateY(-5px); /* Subtle lift effect */
+  }
+  
+  /* Icon container */
+  .icon-container {
+    background-color: #e5e7eb; /* Soft gray for icon background */
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: fadeIn 0.8s ease-in-out;
+  }
+  
+  .icon-container svg {
+    color: #1d4ed8; /* Blue for icons */
+  }
+  
+  /* Card content */
+  .text-2xl {
+    font-size: 24px;
+    color: #1f2937; /* Darker text for titles */
+  }
+  
+  .text-gray-700 {
+    color: #4b5563; /* Gray for description text */
+  }
+  
+  /* Hover animation for text */
+  .bg-white:hover h3,
+  .bg-white:hover p {
+    color: #1d4ed8; /* Blue on hover */
+  }
+  
+  /* Keyframe animations */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  /* Responsive Design */
+@media (max-width: 1024px) {
+    .grid {
+      grid-template-columns: repeat(2, 1fr); /* Two columns for medium screens */
+    }
+  
+    .icon-container {
+      width: 65px;
+      height: 65px; /* Adjust icon container size */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    h2 {
+      font-size: 28px; /* Reduce heading size */
+    }
+  
+    .grid {
+      grid-template-columns: repeat(1, 1fr); /* Single column for small screens */
+    }
+  
+    .text-2xl {
+      font-size: 20px; /* Adjust font size for smaller screens */
+    }
+  
+    .icon-container {
+      width: 60px;
+      height: 60px; /* Slightly smaller icons */
+    }
+  
+    .p-6 {
+      padding: 16px; /* Reduce padding inside cards */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    h2 {
+      font-size: 24px; /* Smaller heading for very small screens */
+      text-align: center; /* Center align for better fit */
+    }
+  
+    .container {
+      padding: 0 10px; /* Reduce container padding */
+    }
+  
+    .icon-container {
+      width: 50px;
+      height: 50px; /* Smaller icons for extra small screens */
+    }
+  
+    .text-gray-700 {
+      font-size: 14px; /* Smaller description text */
+    }
+  }
+
+  .skills-line {
+    width: 100px;
+    height: 3px;
+    text-align: center;
+    background-color: #007bff;
+    margin: auto;
+  }
+  
