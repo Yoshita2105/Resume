@@ -53,7 +53,7 @@ useEffect(() => {
 
   return (
     <div className="resume">
-      <div className="header" style={{ marginTop: '70px' }}>
+      <div className="header" >
         <h1 >Resume</h1>
         <div className="Resume-line"></div>
 
