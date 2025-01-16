@@ -1,9 +1,26 @@
 /* Base styles */
 #skills {
-    background-color: #f9fafb; /* Light background */
-    padding: 0px 20px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9fafb; /* Light background */
+  padding: 45px 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Adjustments for tablets and smaller devices */
+@media screen and (max-width: 768px) {
+  #skills {
+    padding: 40px 15px; /* Reduce padding for smaller screens */
+    text-align: center; /* Center-align text for better appearance */
   }
+}
+
+/* Adjustments for mobile devices */
+@media screen and (max-width: 480px) {
+  #skills {
+    padding: 38px 10px; /* Further reduce padding for very small screens */
+    font-size: 14px; /* Adjust font size for readability */
+  }
+}
+
   
   .container {
     max-width: 1200px;

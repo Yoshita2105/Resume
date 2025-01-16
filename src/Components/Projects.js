@@ -4,14 +4,14 @@ import './Projects.css';
 const Projects = () => {
   const projects = [
     {
-      name: 'E-Commerce App',
-      description: 'A platform with cart, payment, and product features.',
+      name: 'Bridge Connect Solution',
+      description: 'Bridge Connect Solution is a platform that connects companies with job seekers. It serves as a consulting website that helps companies find suitable candidates, both freshers and experienced professionals.',
       link: '#',
     },
     {
-      name: 'Portfolio Website',
-      description: 'A personal portfolio showcasing projects and skills.',
-      link: '#',
+      name: 'Personal Project - Travel Website',
+      description: 'Designed and implemented dynamic user interfaces using React.js to ensure smooth navigation and an intuitive user experience....increase the content ',
+      link: 'https://travelscom.vercel.app',
     },
   ];
 
@@ -19,9 +19,9 @@ const Projects = () => {
     <section id="projects" className="projects-section">
       <div className="container">
         <h2 className="section-title">Projects</h2>
-        <div className="projects-grid">
+        <div className="projects ">
           {projects.map((project, index) => (
-            <div key={index} className="project-card">
+            <div key={index} className="project-card mb-4">
               <div className="card-content">
                 <h3 className="project-title">{project.name}</h3>
                 <p className="project-description">{project.description}</p>

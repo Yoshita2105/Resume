@@ -1,47 +1,104 @@
-import React from 'react';
+
+import React, { useState, useEffect } from 'react';
+import styled, { keyframes } from 'styled-components';
+import { bounceInLeft } from 'react-animations';
+import { bounceInRight } from 'react-animations';
 import './Resume.css'; // Import the CSS file
 
 function Resume() {
+
+  const [isVisible, setIsVisible] = useState(false);
+
+  const bounceInLeftAnimation = keyframes`${bounceInLeft}`;
+
+  const AnimatedDiv = styled.div`
+    animation: 5s ${bounceInLeftAnimation};
+    font-size: 24px;
+  `;
+
+const bounceInRightAnimation = keyframes`${bounceInRight}`;
+
+const AnimatedDiv2 = styled.div`
+  animation: 5s ${bounceInRightAnimation};
+  font-size: 24px;
+`;
+
+
+useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setIsVisible(true);
+          }
+        });
+      },
+      { threshold: 0.2 } // Adjust threshold as needed
+    );
+
+    const section = document.getElementById('resume');
+    if (section) {
+      observer.observe(section);
+    }
+
+    return () => {
+      if (section) {
+        observer.unobserve(section);
+      }
+    };
+  }, []);
+
+
+
+
   return (
     <div className="resume">
-      <div className="header">
-        <h1>Resume</h1>
+      <div className="header" style={{ marginTop: '70px' }}>
+        <h1 >Resume</h1>
         <div className="Resume-line"></div>
 
-        <p>Magnam dolores commodi suscipit. Necessitatibus eiusconsequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+        <p>This  information provides a concise overview of my professional journey, emphasizing key experiences, education, and skills developed along the way. It reflects my continuous growth and the path I have taken to advance in my career.</p>
       </div>
       <div className='full'>
       <div className="experience">
      
       <div className="education">
         <h2>EDUCATION</h2>
-        <div className="degree">
-          <h3>MASTER OF FINE ARTS & GRAPHIC DESIGN</h3>
-          <p>2015 - 2016</p>
-          <p>Rochester Institute of Technology, Rochester, NY</p>
-          <p>Qui deserunt veniam. Et sed aliquam labore tempore sed quisquam iusto autem sit. Ea vero voluptatum qui ut dignissimos deleniti nerada porti sand markend</p>
-        </div>
 
+       <AnimatedDiv>
         <div className="degree">
-          <h3>BACHELOR OF FINE ARTS & GRAPHIC DESIGN</h3>
-          <p>2010 - 2014</p>
-          <p>Rochester Institute of Technology, Rochester, NY</p>
-          <p>Quia nobis sequi est occaecati aut. Repudiandae et iusto quae reiciendis et quis Eius vel ratione eius unde vitae rerum voluptates asperiores voluptatem Earum molestiae consequatur neque etlon sader mart dila.</p>
+          <h3>MASTER OF COMPUTER APPLICATION</h3>
+          <p> Aug 2022 -  July 2024</p>
+          <p>Shri Vaishnav Vidyapeeth Vishwavidyalaya Indore, Madhya Pradesh</p>
+          <p>7.5cgp</p>
         </div>
+        </AnimatedDiv>
+        <AnimatedDiv2>
+        <div className="degree">
+          <h3>BACHELOR OF SCIENCE IN COMPUTERSCIENCE</h3>
+          <p> JULY 2019 - JUNE 2022</p>
+          <p>Shri Jayatilal Hirachand Sanghvi Gujarati Innovative College of Commerce & Science Indore, Madhya Pradesh</p>
+          <p>6.6cgp</p>
+        </div>
+        </AnimatedDiv2>
       </div>
       </div>
 
       <div className="professional-experience">
         <h2>PROFESSIONAL EXPERIENCE</h2>
         <div className="experience">
-          <h3>SENIOR GRAPHIC DESIGN SPECIALIST</h3>
-          <p>2019 - Present</p>
-          <p>Experion, New York, NY</p>
+          <h3>FRONTEND DEVELOPER</h3>
+          <p> JAN 2024 - Dec 2024</p>
+          <p>DigiChum Infotech LLP Indore, Madhya pradesh</p>
+          <p>DigiChum Infotech LLP is an IT solutions company that specializes in web development, application development, and graphic design
+          services..</p>
           <ul>
-            <li>Lead in the design, development, and implementation of the graphic, layout, and production communication materials.</li>
-            <li>Delegate tasks to the 7 members of the design team and provide counsel on all aspects of the project.</li>
-            <li>Supervise the assessment of all graphic materials in order to ensure quality and accuracy of the design.</li>
-            <li>Oversee the efficient use of production project budgets ranging from $2,000 - $25,000.</li>
+            <li>Designed and developed user-friendly web interfaces using
+            [Frontend technologies, React, Javascript].</li>
+            <li>Implemented responsive design principles for optimal user
+            experience. </li>
+            <li>Working closely with UI/UX designers to translate design
+            mockups into functional code</li>
           </ul>
         </div>
 

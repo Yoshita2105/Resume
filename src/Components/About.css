@@ -1,13 +1,13 @@
 /* About Container */
 .about-container {
-    padding: 40px;
+    padding: 20px;
     font-family: Arial, sans-serif;
   }
   
   /* Title Section */
   .about-section {
     text-align: left;
-    margin-top: 150px;
+    margin-top: 90px;
     margin-bottom: 40px;
   }
   
@@ -19,6 +19,14 @@
   
   .about-line {
     width: 100px;
+    height: 3px;
+    text-align: left;
+    background-color: #007bff;
+    margin: 10px ;
+  }
+
+  .about-lines {
+    width: 200px;
     height: 3px;
     text-align: left;
     background-color: #007bff;
@@ -74,7 +82,7 @@
     display: flex;
     flex-wrap: wrap;
    
-    gap: 40px;
+    gap: 8px;
   }
   
   .about-info-list {
@@ -109,7 +117,9 @@
 
     .about-info-lists {
       flex-direction: column;
-      align-items: center;
+     
+      
+      text-align: left;
     }
   
     .about-info-right {
@@ -117,7 +127,8 @@
     }
   
     .about-info-list {
-      margin-bottom: 20px;
+      text-align: left;
+      /* margin-bottom: 20px; */
     }
   }
   

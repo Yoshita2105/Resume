@@ -1,10 +1,12 @@
-/* General section styling */
 .projects-section {
-    background-color: #f9fafb; /* Soft background color */
-    padding: 60px 20px;
-    font-family: 'Roboto', sans-serif;
-  }
-  
+  background-color: #f9fafb; /* Soft background color */
+  padding: 60px 20px;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Tablet screens (768px and below) */
+
+
   .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -17,10 +19,26 @@
     color: #1f2937; /* Dark gray for title */
     margin-bottom: 40px;
     position: relative;
-   
+   margin-top: 35PX;
     display: inline-block;
   }
  
+  @media screen and (max-width: 768px) {
+  .section-title {
+    font-size: 28px; /* Reduce font size for smaller screens */
+    margin-bottom: 30px; /* Adjust spacing */
+    margin-top: 20px; /* Adjust top margin */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .section-title {
+    font-size: 24px; /* Further reduce font size for very small screens */
+    margin-bottom: 20px; /* Tighter spacing */
+    margin-top: 15px; /* Tighter top margin */
+  }
+}
+
   
   .section-title::after {
     content: '';
@@ -30,7 +48,7 @@
     transform: translateX(-50%);
     width: 80px;
     height: 4px;
-    background-color: #007bff;
+    
   /* Accent color */
     border-radius: 2px;
   }

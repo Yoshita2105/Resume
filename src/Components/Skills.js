@@ -1,10 +1,25 @@
-import React from 'react';
+
+import React, { useState, useEffect } from 'react';
+import styled, { keyframes } from 'styled-components';
+import { bounceInLeft } from 'react-animations';
 import './Skills.css';
+
+ import { Link } from 'react-router-dom';
 import { FaReact, FaJs, FaCss3Alt, FaHtml5, FaGitAlt, FaBootstrap } from 'react-icons/fa'; // Importing icons
 
 function Skills() {
+
+  const [isVisible, setIsVisible] = useState(false);
+
+  const bounceInLeftAnimation = keyframes`${bounceInLeft}`;
+
+  const AnimatedDiv = styled.div`
+    animation: 2s ${bounceInLeftAnimation};
+    font-size: 24px;
+  `;
   const projects = [
     {
+      
       icon: <FaHtml5 size={40} style={{ color: '#E34F26' }} />,
       name: 'HTML',
       description: 'Strong understanding of HTML5 semantics, including structure, forms, and accessibility.',
@@ -36,25 +51,53 @@ function Skills() {
     },
   ];
 
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setIsVisible(true);
+          }
+        });
+      },
+      { threshold: 0.2 } // Adjust threshold as needed
+    );
+
+    const section = document.getElementById('skills');
+    if (section) {
+      observer.observe(section);
+    }
+
+    return () => {
+      if (section) {
+        observer.unobserve(section);
+      }
+    };
+  }, []);
+
   return (
     <div id="skills" className="skills-section">
       <section className="bg-white-100">
         <div className="container mx-auto text-center">
           <h2 className="text-4xl font-semibold mb-6 text-left">Skills</h2>
          
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <AnimatedDiv>
+          <div className="grid grid-cols-1 lg:grid-cols-2 lg:grid-cols-3 gap-3" >
             {projects.map((project, index) => (
               <div
                 key={index}
-                className="bg-white shadow-lg w-full rounded-lg p-6 hover:shadow-xl transition-shadow"
+                className="bg-white shadow-lg w-90 h-60 rounded-lg p-2 hover:shadow-xl transition-shadow"
               >
                 <div className="icon-container mb-4">{project.icon}</div>
                 <h3 className="text-2xl font-bold mb-2">{project.name}</h3>
-                <p className="text-gray-700 mb-4">{project.description}</p>
+                <p className="text-gray-700 mb-4 text-xl">{project.description}</p>
               </div>
+              
+             
             ))}
           </div>
+          </AnimatedDiv>
+         
         </div>
       </section>
     </div>
