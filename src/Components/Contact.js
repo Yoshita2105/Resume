@@ -44,7 +44,7 @@ function Contact() {
         <Col md={6} className="mt-5">
           <Slide direction="left" triggerOnce>
             <p className="text-start d-block"><strong>Name:</strong> Yoshita Jain</p>
-            <p className="text-start d-block"><strong>Phone Number:</strong> 626-527-6089</p>
+            <p className="text-start d-block"><strong>Phone Number:</strong> 8962746373</p>
             <p className="text-start d-block"><strong>Address:</strong> Satellite Junction Dewas Naka, Indore Madhya Pradesh</p>
           </Slide>
         </Col>

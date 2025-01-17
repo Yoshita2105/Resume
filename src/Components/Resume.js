@@ -54,7 +54,7 @@ useEffect(() => {
   return (
     <div className="resume">
       <div className="header" >
-        <h1 >Resume</h1>
+        <h1 style={{marginTop:"50px"}}>Resume</h1>
         <div className="Resume-line"></div>
 
         <p>This  information provides a concise overview of my professional journey, emphasizing key experiences, education, and skills developed along the way. It reflects my continuous growth and the path I have taken to advance in my career.</p>
