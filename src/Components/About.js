@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import './About.css';
-import mephotos from '../Assets/mephotos.jpg';
+import myphoto2 from '../Assets/myphoto2.jpg';
 
 const About = () => {
   return (
@@ -28,7 +28,7 @@ const About = () => {
         transition={{ duration: 1.8 }}
       >
         <div className="about-info-left">
-          <img src={mephotos} alt="About" className="about-image" />
+          <img src={myphoto2} alt="About" className="about-image" />
         </div>
 
         <div className="about-info-right">
